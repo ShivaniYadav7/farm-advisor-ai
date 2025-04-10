@@ -1,3 +1,4 @@
+import os
 from flask import Flask, render_template, request
 from agents.farm_data_analyst import FarmDataAnalyst
 from agents.market_trend_advisor import MarketTrendAdvisor
@@ -31,4 +32,5 @@ def index():
     return render_template('index.html', result=result)
 
 if __name__ == '__main__':
-    app.run(debug=True)
+    app.run(host='0.0.0.0', port=int(os.environ.get('PORT', 5000)))
+
