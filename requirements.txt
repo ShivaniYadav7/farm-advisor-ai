@@ -1,0 +1,4 @@
+pandas
+sqlite3
+Flask==2.3.2
+pandas==2.1.4
